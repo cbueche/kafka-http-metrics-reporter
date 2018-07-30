@@ -21,7 +21,8 @@ package nl.techop.kafka;
 import kafka.metrics.KafkaMetricsConfig;
 import kafka.metrics.KafkaMetricsReporter;
 import kafka.utils.VerifiableProperties;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * Class KafkaHttpMetricsReporter
@@ -32,7 +33,7 @@ import org.apache.log4j.Logger;
  */
 public class KafkaHttpMetricsReporter implements KafkaMetricsReporter, KafkaHttpMetricsReporterMBean {
 
-    private static Logger LOG = Logger.getLogger(KafkaHttpMetricsReporter.class);
+    private static Logger LOG = LoggerFactory.getLogger(KafkaHttpMetricsReporter.class);
     private boolean initialized = false;
     private boolean running = false;
     private boolean enabled = false;

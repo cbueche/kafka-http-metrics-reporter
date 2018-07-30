@@ -18,7 +18,6 @@
 
 package nl.techop.kafka;
 
-import org.apache.log4j.Logger;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.servlet.ServletContextHandler;
 import org.eclipse.jetty.servlet.ServletHolder;
@@ -30,6 +29,8 @@ import com.yammer.metrics.reporting.HealthCheckServlet;
 import com.yammer.metrics.reporting.MetricsServlet;
 import com.yammer.metrics.reporting.PingServlet;
 import com.yammer.metrics.reporting.ThreadDumpServlet;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * Class KafkaHttpMetricsServer
@@ -39,7 +40,7 @@ import com.yammer.metrics.reporting.ThreadDumpServlet;
  */
 public class KafkaHttpMetricsServer {
 
-    private static final Logger LOG = Logger.getLogger(KafkaHttpMetricsServer.class);
+    private static final Logger LOG = LoggerFactory.getLogger(KafkaHttpMetricsServer.class);
     private Server server;
     private int port;
     private String bindAddress;
