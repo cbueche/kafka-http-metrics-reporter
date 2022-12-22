@@ -6,7 +6,11 @@ Jetty with the metrics servlets (http://metrics.codahale.com/manual/servlets/kaf
 Instead of retrieving metrics through JMX with JConsole it is now possible to retrieve the metrics with curl or some other http / rest client.
 Code is tested with Kafka 2.12-0.11.0.0
 
-[![Travis Build Status](https://secure.travis-ci.org/arnobroekhof/kafka-http-metrics-reporter.png)](http://travis-ci.org/arnobroekhof/kafka-http-metrics-reporter)
+Edit for Java 11 / 2022
+------------
+
+I'm using this metric plugin with Kafka on a recent system, with Java 11. The build was failing with some errors about an unsupported `-author` option to javadoc. I removed the whole doc part from pom.xml to fix it. Enhancements welcome.
+
 
 Install On Broker
 ------------
